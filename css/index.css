@@ -1,0 +1,81 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	text-decoration: none;
+	font-family: cursive;
+
+}
+#con{
+	margin: auto auto;
+	width: 1100px;
+	height: auto;
+}
+/*顶部导航*/
+#top{
+	margin: 10px 0px;
+	width: auto;
+	height: 60px;
+	background-color:  rgb(232,71,71);
+}
+/*logo*/
+#logo{
+	width: 200px;
+	height: 60px;
+}
+.logo{
+	font-size: 30px;
+	color: white;
+	font-weight: bolder;
+	margin: 15px;
+}
+#top_left{
+	width: 400px;
+	height: 60px;
+	float: right;
+}
+#top ul li {
+	width: 100px;
+	height: 60px;
+	float: right;
+}
+#top ul li a{
+	width: 100px;
+	height: 60px;
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+	line-height: 60px;
+	margin-left: 28px;
+}
+#top ul .one:hover{
+	background-color: rgb(22,128,194);
+}
+#top ul .music:hover{
+	background-color: rgb(228,24,23);
+}
+#top ul .movie:hover{
+	background-color: rgb(252,205,13);
+}
+#body{
+	width: auto;
+	height: 700px;
+}
+#music{
+	width: 350px;
+	height: 700px;
+	float: left;
+	background-color: rgb(22,128,194);
+}
+#movie{
+	width: 400px;
+	height: 700px;
+	float: left;
+	background-color: rgb(252,205,13);
+}
+#footer{
+	margin: 10px 0px;
+	width: auto;
+	height: 200px;
+	background-color: rgb(69,162,69);
+}
