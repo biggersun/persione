@@ -8,7 +8,7 @@
 }
 #con{
 	margin: auto auto;
-	width: 1100px;
+	width: 80%;
 	height: auto;
 }
 /*顶部导航*/
@@ -20,7 +20,7 @@
 }
 /*logo*/
 #logo{
-	width: 200px;
+	width: 10%;
 	height: 60px;
 }
 .logo{
@@ -57,22 +57,31 @@
 #top ul .movie:hover{
 	background-color: rgb(252,205,13);
 }
+/*
+*内容部分
+*/
 #body{
 	width: auto;
-	height: 700px;
+	height: auto;
 }
-#music{
-	width: 350px;
-	height: 700px;
-	float: left;
+#one{
+	width: auto;
+	height: 576px;
 	background-color: rgb(22,128,194);
 }
+#music{
+	width: auto;
+	height: 576px;
+	background-color: rgb(228,24,23);
+}
 #movie{
-	width: 400px;
-	height: 700px;
-	float: left;
+	width: auto;
+	height: 576px;
 	background-color: rgb(252,205,13);
 }
+/*
+*页脚部分
+*/
 #footer{
 	margin: 10px 0px;
 	width: auto;
