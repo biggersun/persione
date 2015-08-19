@@ -1,0 +1,77 @@
+/*样式重置*/
+*{margin: 0px;padding: 0px;}
+table{border-collapse: collapse;border-spacing: 0;}
+fieldset,img{border: 0;}
+/*遮罩层*/
+#lightbox-mask{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: #000;
+	opacity: 0.5;
+	filter:alpha(opacity=50%);
+	z-index: 1000;
+}
+/*弹出层*/
+#lightbox-popup{
+	position: fixed;
+	left: 50%;
+	margin-left: -200px;
+	width: 300px;
+	z-index: 1001;
+}
+#lightbox-popup .lightbox-pic-view{
+	position: relative;
+	border: 5px solid #fff;
+	border-radius: 3px;
+	overflow: hidden;
+	background-color: #fff;
+	background: url(../image/icon/loading.gif) no-repeat center center;
+}
+#lightbox-popup .lightbox-pic-view .lightbox-image{
+	display: block;
+}
+#lightbox-popup .lightbox-pic-view .lightbox-btn{
+	position: absolute;
+	top: 0;
+	width: 35%;
+	height: 100%;
+	z-index: 1;
+}
+#lightbox-popup .lightbox-pic-view .lightbox-prev-btn{
+	left: 0;
+}
+#lightbox-popup .lightbox-pic-view .lightbox-next-btn{
+	right: 0;
+}
+#lightbox-popup .lightbox-pic-view .lightbox-prev-btn-show{
+	background: url(../image/icon/prev.png) no-repeat left center;
+	cursor: pointer;
+}
+#lightbox-popup .lightbox-pic-view .lightbox-next-btn-show{
+	background: url(../image/icon/next.png) no-repeat right center;
+	cursor: pointer;
+}
+#lightbox-popup .lightbox-pic-caption{
+	position: relative;
+	margin: 0px 5px;
+	margin-top: -60px;
+	background-color: rgba(0,0,0,0.5);
+}
+#lightbox-popup .lightbox-pic-caption .lightbox-caption-area{
+	padding: 10px 5px;
+	color: #fff;
+}
+#lightbox-popup .lightbox-pic-caption .lightbox-of-index{
+	color: #999;
+}
+#lightbox-popup .lightbox-pic-caption .lightbox-close-btn{
+	position: absolute;
+	right: 10px;
+	top: 13px;
+	width: 27px;
+	height: 27px;
+	background: url(../image/icon/close.png) no-repeat center center;
+}
