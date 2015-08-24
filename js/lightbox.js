@@ -93,10 +93,10 @@
 			}else if (dir === 'prev'){
 				this.index--;
 				if (this.index <= 0) {
-					this.nextBtn.addClass('disabled').removeClass('lightbox-prev-btn-show');
+					this.prevBtn.addClass('disabled').removeClass('lightbox-prev-btn-show');
 				}
 				if (this.index !== this.groupData.length-1) {
-					this.prevBtn.removeClass('disabled');
+					this.nextBtn.removeClass('disabled');
 				}
 				var src2 = this.groupData[this.index].src;
 				this.loadPicSize(src2);
