@@ -111,7 +111,6 @@
 				self.popupPic.attr("src",sourceSrc);
 				var picWidth = self.popupPic.width();
 					picHeight = self.popupPic.height();
-				console.log(picWidth+":"+picHeight);
 				self.changePic(picWidth,picHeight);
 			});
 		},
@@ -141,8 +140,8 @@
 				self.flag = true;
 			});
 			//设置描述文字和当前索引
-			this.captionText.text(this.groupData[this.index-1].caption);
-			this.currentIndex.text('当前索引:'+this.index+' of '+this.groupData.length);
+			this.captionText.text(this.groupData[this.index].caption);
+			this.currentIndex.text('当前索引:'+(this.index+1)+' of '+this.groupData.length);
 		},
 		preLoadImg:function(src,callback){
 			var img = new Image();
@@ -194,10 +193,10 @@
 		 	//按钮显示与否的控制
 		 	var groupDataLength = this.groupData.length;
 		 	if (groupDataLength>1) {
-		 		if (this.index === 1) {
+		 		if (this.index === 0) {
 		 			this.prevBtn.addClass('disabled');
 		 			this.nextBtn.removeClass('disabled');
-		 		} else if (this.index === groupDataLength) {
+		 		} else if (this.index === groupDataLength-1) {
 		 			this.prevBtn.removeClass('disabled');
 		 			this.nextBtn.addClass('disabled');
 		 		} else{
@@ -214,8 +213,8 @@
 		getIndexOf:function (currentId) {
 			var index = 0;
 			//遍历获取到的数组数据来获取索引
-			$(this.groupData).each(function() {
-				index++;
+			$(this.groupData).each(function(i) {
+				index=i;
 				if (this.id == currentId) {
 					return false;
 
