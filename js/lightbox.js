@@ -249,7 +249,7 @@
 			var strDom = 
 			'<div class="lightbox-pic-view">'+
 			'<span class="lightbox-btn lightbox-prev-btn"></span>'+
-			'<img class="lightbox-image" src="image/one01.jpg">'+
+			'<img class="lightbox-image" src="">'+
 			'<span class="lightbox-btn lightbox-next-btn"></span>'+
 			'</div>'+
 			'<div class="lightbox-pic-caption">'+
