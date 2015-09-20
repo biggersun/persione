@@ -1,7 +1,9 @@
 (function($){
 	$.fn.extend({
 			Scroll:function(opt,callback){
-                if(!opt){var opt={};}
+                if(!opt){
+                    var opt={};
+                }
                 var _btnLeft = $("#"+ opt.left);
                 var _btnRight = $("#"+ opt.right);
                 var timerID;
@@ -25,7 +27,7 @@
                                 _btnLeft.bind("click",scrollRight); //Shawphy:绑定向左按钮的点击事件
                         });
 
-                }
+                };
                 //Shawphy:向右翻页函数
                 var scrollRight=function(){
                         _btnRight.unbind("click",scrollLeft);
@@ -42,7 +44,7 @@
                         },speed,function(){
                                 _btnRight.bind("click",scrollLeft);
                         });
-                }
+                };
                //Shawphy:自动播放
                 var autoPlay = function(){
                         if(timer)timerID = window.setInterval(scrollRight,timer);
