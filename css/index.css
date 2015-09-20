@@ -62,7 +62,7 @@ body{
 	background-color: rgb(22,128,194);
 }
 #top ul .music:hover{
-	background-color: rgb(228,24,23);
+	background-color: rgb(69,162,69);
 }
 #top ul .movie:hover{
 	background-color: rgb(252,205,13);
@@ -87,7 +87,7 @@ body{
 #movie{
 	width: auto;
 	height: 576px;
-	background-color: rgb(252,205,13);
+	/*background-color: rgb(252,205,13);*/
 }
 /*
 *页脚部分
@@ -98,3 +98,45 @@ body{
 	height: 200px;
 	background-color: rgb(69,162,69);
 }
+/*
+图片切换
+*/
+.scrollbox{
+	width: 1000px;
+	position: relative;
+}
+.scroltit{
+	float: left;
+}
+.scroltit small{
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+#scollDiv{
+
+	height: 576px;
+	overflow: hidden;
+}
+#scollDiv ul li{
+	float: left;
+	height:576px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+#scollDiv ul li img{
+	
+	height: 575px;
+	float: left;
+}
+.cl:after { 
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden ; !
+    } 
+.cl { zoom: 1; }

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
 	<script src="js/jquery/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
-
+	<script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 	<div id="con">
@@ -28,21 +28,23 @@
 			</div>	
 		</div>
 		<div id="body">
-			<div class="scrollbox cl">
-			<div class="scroltit">
-				<small id="bt_left"><img src="images/next.png"></small>
-				<small id="bt_right"><img src="images/prev.png"></small>
+
+			<div id="movie">
+				<div class="scrollbox cl">
+					<div class="scroltit">
+						<small id="btn_left"><img src="image/icon/next.png"></small>
+						<small id="btn_right"><img src="image/icon/prev.png"></small>
+					</div>
+				<div id="scollDiv">
+					<ul>
+						<li><img src="image/one01.jpg" class="js-lightbox" data-role="js-lightbox" data-source="image/one01.jpg" data-group="group-1" data-id="one01" data-caption="one01"></li>
+						<li><img src="image/one02.jpg" class="js-lightbox" data-role="js-lightbox" data-source="image/one02.jpg" data-group="group-1" data-id="one02" data-caption="one02"></li>
+						<li><img src="image/one03.jpg" class="js-lightbox" data-role="js-lightbox" data-source="image/one03.jpg" data-group="group-1" data-id="one03" data-caption="one03"></li>
+						<li><img src="image/one04.jpg" class="js-lightbox" data-role="js-lightbox" data-source="image/one04.jpg" data-group="group-1" data-id="one04" data-caption="one04"></li>
+					</ul>
+				</div>
+				</div>
 			</div>
-				<ul>
-					<li class="movie">
-							<div>
-								<img src="image/one01.jpg" class="js-lightbox" data-role="js-lightbox" data-source="image/one01.jpg" data-group="group-1" data-id="one01" data-caption="one01">
-								<img src="image/one02.jpg" class="js-lightbox" data-role="js-lightbox" data-source="image/one02.jpg" data-group="group-1" data-id="one02" data-caption="one02">
-								<img src="image/one03.jpg" class="js-lightbox" data-role="js-lightbox" data-source="image/one03.jpg" data-group="group-1" data-id="one03" data-caption="one03">
-								<img src="image/one04.jpg" class="js-lightbox" data-role="js-lightbox" data-source="image/one04.jpg" data-group="group-1" data-id="one04" data-caption="one04">
-							</div>
-					</li>
-				</ul>
 			</div>
 			<div id="music"></div>
 			<div id="one">
@@ -64,6 +66,7 @@
 	</div>
 	<script type="text/javascript">
 		$(function(){
+			$("#scollDiv").Scroll({speed:600,timer:6000,left:"btn_left",right:"btn_right"});
 			var lightbox = new LightBox(); 
 		});
 	</script>
