@@ -12,7 +12,8 @@
                 var speed=opt.speed?parseInt(opt.speed,10):500;
                 var timer=opt.timer;
                 var leftWid=0-ImgWid;
-                var indexAll = _this.find("li").length-1;
+                var _index = this.index();
+                 
                 //滚动函数
                 var scrollLeft=function(){
                         _btnLeft.unbind("click",scrollRight); //Shawphy:取消向左按钮的函数绑定
@@ -22,10 +23,12 @@
                                     // for(var i=0;i<indexAll;i++){
                                     //     _this.find("li:eq("+i+")").appendTo(_this);                                
                                     // }
-                                _this.find("li:first").appendTo(_this);
+                                if (_index==0) {};
+                                _this.find("li:eq("+_index-1+")").appendTo(_this);
                                 _this.css({marginLeft:0});
                                 _btnLeft.bind("click",scrollRight); //Shawphy:绑定向左按钮的点击事件
                         });
+                        console.log(_index);
 
                 };
                 //Shawphy:向右翻页函数
@@ -36,7 +39,8 @@
                             //     }
                        // this.j=0;
                         // for(var i=0;i<indexAll;i++){j++;}
-                        _this.find("li:last").show().prependTo(_this);
+                       // _this.find("li:eq("+_index+")").show().prependTo(_this);
+                        _this.find("li:eq("+_index+1+")").appendTo(_this);
                         _this.css({marginLeft:leftWid});
                         
                         _this.animate({
