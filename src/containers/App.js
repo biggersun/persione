@@ -1,16 +1,16 @@
 import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
-import Loading from '../components/loading/CircularProgress'
+
+import AircleList from './AircleList';
 
 const App = () => (
   <MuiThemeProvider>
     <div>
       <AppBar
-        title="Title"
-        iconClassNameRight="muidocs-icon-navigation-expand-more"
+        title="文章列表"
       />
-      <Loading />
+      <AircleList initialColor="dasds" />
     </div>
   </MuiThemeProvider>
 );
