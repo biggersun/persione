@@ -2,6 +2,7 @@ import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 
+import AircleList_test from './AircleList_test'
 import AircleList from './AircleList';
 
 const App = () => (
@@ -10,7 +11,7 @@ const App = () => (
       <AppBar
         title="文章列表"
       />
-      <AircleList initialColor="dasds" />
+      <AircleList_test />
     </div>
   </MuiThemeProvider>
 );
