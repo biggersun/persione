@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --hot --inline --open",
-    "build": "react-scripts build",
+    "build": "webpack -p --config webpack.production.config.js",
     "eject": "react-scripts eject",
     "test": "react-scripts test",
     "lint": "eslint **/*.js",
