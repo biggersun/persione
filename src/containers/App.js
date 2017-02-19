@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
+import { connect } from 'react-redux'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
+import Loading from '../components/loading/CircularProgress'
 
 import AircleList_test from './AircleList_test'
 import AircleList from './AircleList';
 
-const App = () => (
+const App = ( progress ) => {
+  return (
   <MuiThemeProvider>
     <div>
       <AppBar
         title="文章列表"
       />
-      <AircleList_test />
+      { progress.progressCtrl === 'CLOSE' ? <AircleList_test /> : <Loading />}
     </div>
   </MuiThemeProvider>
-);
-export default App;
+)};
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    progressCtrl: state.progress.progressCtrl
+  }
+}
+
+export default connect(mapStateToProps)(App);
+

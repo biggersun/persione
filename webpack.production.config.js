@@ -17,6 +17,9 @@ module.exports = {
         presets: ['es2015', 'react'],
       },
       include: path.join(__dirname, '.'),
-    }]
+    }, {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader?modules',
+    }, { test: /\.(png|jpg)$/, loader: 'url-loader?limit=40000' }]
   },
 }

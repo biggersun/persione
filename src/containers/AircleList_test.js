@@ -9,6 +9,9 @@ import IconButton from 'material-ui/IconButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
+import img_a from '../../image/icon/a.jpg'
+import img_b from '../../image/icon/b.jpg'
+import img_q from '../../image/icon/q.jpg'
 
 const iconButtonElement = (
   <IconButton
@@ -33,7 +36,7 @@ const ListAircle = () => (
       <List>
         <Subheader>Today</Subheader>
         <ListItem
-          leftAvatar={<Avatar src="./../../image/icon/a.jpg" />}
+          leftAvatar={<Avatar src={ img_a } />}
           primaryText="Brunch this weekend?"
           secondaryText={
             <p>
@@ -45,7 +48,7 @@ const ListAircle = () => (
         />
         <Divider inset={true} />
         <ListItem
-          leftAvatar={<Avatar src="../../image/icon/b.jpg" />}
+          leftAvatar={<Avatar src={ img_b } />}
           primaryText={
             <p>Summer BBQ&nbsp;&nbsp;<span style={{color: lightBlack}}>4</span></p>
           }
@@ -57,105 +60,17 @@ const ListAircle = () => (
           }
           secondaryTextLines={2}
         />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="../../image/icon/q.jpg" />}
-          primaryText="Oui oui"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Grace Ng</span> --
-              Do you have Paris recommendations? Have you ever been?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="../../image/icon/q.jpg" />}
-          primaryText="Birdthday gift"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Kerem Suer</span> --
-              Do you have any ideas what we can get Heidi for her birthday? How about a pony?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="../../image/icon/q.jpg" />}
-          primaryText="Recipe to try"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Raquel Parrado</span> --
-              We should eat this: grated squash. Corn and tomatillo tacos.
-            </p>
-          }
-          secondaryTextLines={2}
-        />
       </List>
       <List>
         <Subheader>Today</Subheader>
         <ListItem
-          leftAvatar={<Avatar src="../../image/icon/q.jpg" />}
+          leftAvatar={<Avatar src={ img_q } />}
           rightIconButton={rightIconMenu}
           primaryText="Brendan Lim"
           secondaryText={
             <p>
               <span style={{color: darkBlack}}>Brunch this weekend?</span><br />
               I&apos;ll be in your neighborhood doing errands this weekend. Do you want to grab brunch?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="../../image/icon/q.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="me, Scott, Jennifer"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Summer BBQ</span><br />
-              Wish I could come, but I&apos;m out of town this weekend.
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="../../image/icon/q.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Grace Ng"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Oui oui</span><br />
-              Do you have any Paris recs? Have you ever been?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="../../image/icon/q.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Kerem Suer"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Birthday gift</span><br />
-              Do you have any ideas what we can get Heidi for her birthday? How about a pony?
-            </p>
-          }
-          secondaryTextLines={2}
-        />
-        <Divider inset={true} />
-        <ListItem
-          leftAvatar={<Avatar src="../../image/icon/q.jpg" />}
-          rightIconButton={rightIconMenu}
-          primaryText="Raquel Parrado"
-          secondaryText={
-            <p>
-              <span style={{color: darkBlack}}>Recipe to try</span><br />
-              We should eat this: grated squash. Corn and tomatillo tacos.
             </p>
           }
           secondaryTextLines={2}
