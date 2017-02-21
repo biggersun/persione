@@ -7,14 +7,14 @@ import Loading from '../components/loading/CircularProgress'
 import AircleList_test from './AircleList_test'
 import AircleList from './AircleList';
 
-const App = ( progress ) => {
+const App = ( props ) => {
   return (
   <MuiThemeProvider>
     <div>
       <AppBar
         title="文章列表"
       />
-      { progress.progressCtrl === 'CLOSE' ? <AircleList_test /> : <Loading />}
+      { props.progressCtrl === 'CLOSE' ? <AircleList_test /> : <Loading />}
     </div>
   </MuiThemeProvider>
 )};
