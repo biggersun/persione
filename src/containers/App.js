@@ -4,8 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import Loading from '../components/loading/CircularProgress'
 
-import AircleList_test from './AircleList_test'
-import AircleList from './AircleList';
+import AircleContainer from './AircleContainer';
 
 const App = ( props ) => {
   return (
@@ -14,14 +13,15 @@ const App = ( props ) => {
       <AppBar
         title="文章列表"
       />
-      { props.progressCtrl === 'CLOSE' ? <AircleList_test /> : <Loading />}
+      { props.progressCtrl === 'CLOSE' ? <AircleContainer aircles={ props.aircleList } /> : <Loading />}
     </div>
   </MuiThemeProvider>
 )};
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    progressCtrl: state.progress.progressCtrl
+    progressCtrl: state.progress.progressCtrl,
+    aircleList: state.aircles
   }
 }
 

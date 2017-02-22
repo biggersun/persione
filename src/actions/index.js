@@ -5,6 +5,12 @@ const receiveAircle = aircles => ({
     type: types.RECEIVE_AIRCLE,
     aircles
 })
+
+const receiveAircleByYear = (year = 2017) => ({
+    type: types.RECEIVE_AIRCLE_BYTEAR,
+    year: year
+})
+
 const receiveTabList = aircles => ({
     type: types.RECEIVE_SELECT,
     tabList: aircles
