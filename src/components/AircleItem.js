@@ -35,7 +35,7 @@ export default class AircleItem extends Component {
           }
           secondaryTextLines={2}
         />
-        <Divider inset={true} />
+        <Divider inset={false} />
        </div>
     )
   }
